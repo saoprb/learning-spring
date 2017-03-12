@@ -1,2 +1,4 @@
 include 'gs-relational-data-access'
+include 'gs-consuming-rest'
+include 'annotation-based-config'
 
