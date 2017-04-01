@@ -22,18 +22,15 @@ jar {
 
 repositories {
     mavenCentral()
+    maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter")
-    compile("org.springframework:spring-orm")
-    compile("org.hibernate:hibernate-entitymanager")
-    compile("org.hibernate:hibernate-core")
-    compile("mysql:mysql-connector-java")
-    compile("commons-dbcp:commons-dbcp")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("com.h2database:h2")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("junit:junit")
 }
