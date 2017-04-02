@@ -29,7 +29,9 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter")
-    compile("org.springframework:spring-web")
-    compile("com.fasterxml.jackson.core:jackson-databind")
+    //compile("org.springframework:spring-web")
+    compile("org.springframework.social:spring-social-twitter")
+    //compile("org.springframework.security:spring-security-crypto")
+    //compile("com.fasterxml.jackson.core:jackson-databind")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
