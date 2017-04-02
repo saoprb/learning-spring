@@ -44,8 +44,8 @@ public class Application {
             Twitter twitter = serviceProvider.getApi(configuration.getAccessToken(), configuration.getAccessTokenSecret());
             twitter.timelineOperations().getHomeTimeline()
                     .stream()
-                    .map(tweet -> String.format("user: %s, tweet=%s%n", tweet.getFromUser(), tweet.getText()))
-                    .forEach(System.out::print);
+                    .map(tweet -> String.format("user: %s, tweet: %s", tweet.getFromUser(), tweet.getText()))
+                    .forEach(logger::info);
 
 //            Twitter twitterTemplate = new TwitterTemplate(configuration.getAppId(), configuration.getAppSecret(),
 //                    configuration.getAccessToken(), configuration.getAccessTokenSecret());
