@@ -1,5 +1,6 @@
 package com.sao.spring.learning;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -8,27 +9,25 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.client.RestTemplate;
 
 /**
- * Created by Sao Paulo Boco on 2/26/2017.
+ * Created by saopr on 4/1/2017.
  */
 @SpringBootApplication
 @ComponentScan
 public class Application {
 
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+    final static Logger logger = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
 
     @Bean
-    public CommandLineRunner commandLineRunner(ApplicationContext applicationContext) {
+    public CommandLineRunner commandLineRunner(ApplicationContext context) {
         return args -> {
-            RestTemplate restTemplate = new RestTemplate();
-            Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-            log.info(quote.toString());
+            logger.info("Hello world");
+            logger.debug("Good morning");
         };
     }
 }

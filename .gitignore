@@ -15,3 +15,9 @@ hs_err_pid*
 .gradle/
 build/
 out/
+
+target/
+
+*.log
+log/
+logs/

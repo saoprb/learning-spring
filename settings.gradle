@@ -4,4 +4,7 @@ include 'annotation-based-config'
 include 'exernal-properties'
 include 'hibernate-example'
 include 'hibernate-jpa-example'
+include 'logback-spring-boot'
+include 'twitter-stream'
+include 'hibernate-spring-boot-jpa'
 

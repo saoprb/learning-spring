@@ -1,0 +1,15 @@
+---
+spring:
+  profiles:
+    active: dev
+  datasource:
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: jdbc:mariadb://localhost:3306/mydb
+      maximum-pool-size: 10
+      username: dev
+      password: secret
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
