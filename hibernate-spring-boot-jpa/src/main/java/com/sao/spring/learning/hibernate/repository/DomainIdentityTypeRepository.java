@@ -7,4 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Created by saopr on 7/15/2017.
  */
 public interface DomainIdentityTypeRepository extends JpaRepository<DomainIdentityType, Integer>  {
+
+    DomainIdentityType findByName(String name);
 }
