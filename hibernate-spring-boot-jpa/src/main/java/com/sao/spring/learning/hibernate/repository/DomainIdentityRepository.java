@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by saopr on 7/15/2017.
  */
-public interface DomainIdentityReposiotry extends CrudRepository<DomainIdentity, Integer> {
+public interface DomainIdentityRepository extends CrudRepository<DomainIdentity, Integer> {
 
     DomainIdentity findByUniqueKey(String uniqueKey);
 }
