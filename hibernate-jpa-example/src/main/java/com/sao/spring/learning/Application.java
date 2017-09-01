@@ -19,8 +19,6 @@ import java.util.stream.StreamSupport;
  * Created by Sao Paulo Boco on 3/15/2017.
  */
 @SpringBootApplication
-@EnableAutoConfiguration
-@ComponentScan
 public class Application {
 
     public static final Logger log = LoggerFactory.getLogger(Application.class);

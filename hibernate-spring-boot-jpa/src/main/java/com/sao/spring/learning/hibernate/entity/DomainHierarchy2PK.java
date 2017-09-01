@@ -30,9 +30,7 @@ public class DomainHierarchy2PK implements Serializable {
         DomainHierarchy2PK that = (DomainHierarchy2PK) o;
 
         if (parentIdentity != null ? !parentIdentity.equals(that.getParentIdentity()) : that.getParentIdentity() != null) return  false;
-        if (childIdentity != null ? !childIdentity.equals(that.getChildIdentity()) : that.getChildIdentity() != null) return  false;
-
-        return true;
+        return childIdentity != null ? childIdentity.equals(that.getChildIdentity()) : that.getChildIdentity() == null;
     }
 
     public int hashCode() {
